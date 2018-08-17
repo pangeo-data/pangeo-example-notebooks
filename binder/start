@@ -4,7 +4,7 @@
 if [[ -z "${JUPYTER_IMAGE_SPEC}" ]]; then
     echo "JUPYTER_IMAGE_SPEC is not set"
 else
-  export DASK_KUBERNETES__WORKER_TEMPLATE__SPEC__IMAGE=${JUPYTER_IMAGE_SPEC}
+  sed -i -e "s|WORKER_IMAGE|${JUPYTER_IMAGE_SPEC}|g" ${DASK_KUBERNETES__WORKER_TEMPLATE_PATH}
 fi
 
 exec "$@"

@@ -19,7 +19,7 @@ kubernetes:
           - 6GB
           - --death-timeout
           - '60'
-        image: null  # overwrite with env variable
+        image: WORKER_IMAGE
         name: dask-worker
         resources:
           limits:
