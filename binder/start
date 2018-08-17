@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# set worker image url in worker template
+if [[ -z "${JUPYTER_IMAGE_SPEC}" ]]; then
+    echo "JUPYTER_IMAGE_SPEC is not set"
+else
+  export DASK_KUBERNETES__WORKER_TEMPLATE__SPEC__IMAGE=${JUPYTER_IMAGE_SPEC}
+fi
+
+exec "$@"

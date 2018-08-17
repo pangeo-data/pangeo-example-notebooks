@@ -1,0 +1,30 @@
+logging:
+  bokeh: critical
+
+diagnostics-link: "../proxy/{port}/status"
+tick-maximum-delay: 5s
+
+kubernetes:
+  worker-template:
+    metadata:
+    spec:
+      restartPolicy: Never
+      containers:
+      - args:
+          - dask-worker
+          - --nthreads
+          - '2'
+          - --no-bokeh
+          - --memory-limit
+          - 6GB
+          - --death-timeout
+          - '60'
+        image: null  # overwrite with env variable
+        name: dask-worker
+        resources:
+          limits:
+            cpu: "1.75"
+            memory: 2G
+          requests:
+            cpu: "1.75"
+            memory: 2G

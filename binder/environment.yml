@@ -1,0 +1,34 @@
+name: pangeo
+channels:
+  - conda-forge
+  - default
+dependencies:
+  - python=3.6
+  - numpy
+  - scipy
+  - pandas
+  - xarray
+  - matplotlib
+  - dask
+  - distributed
+  - gcsfs
+  - intake
+  - intake-xarray
+  - scikit-image
+  - scikit-learn
+  - dask-ml
+  - bokeh
+  - holoviews
+  - geoviews
+  - datashader
+  - netcdf4
+  - zarr
+  - numcodecs
+  - python-blosc
+  - lz4
+  - nbserverproxy
+  - jupyter
+  - ipywidgets
+  - pip:
+    - kubernetes
+    - git+https://github.com/dask/dask-kubernetes.git
