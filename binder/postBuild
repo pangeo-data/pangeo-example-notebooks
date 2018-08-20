@@ -1,9 +1,4 @@
 #!/bin/bash
 jupyter serverextension enable --py nbserverproxy --sys-prefix
 
-export DASK_TICK_MAXIMUM_DELAY=5s
-export DASK_DISTRIBUTED__DIAGNOSTICS_LINK={JUPYTERHUB_SERVICE_PREFIX}proxy/{port}/status
-export DASK_KUBERNETES__WORKER_TEMPLATE_PATH=${PWD}/.dask/config.yaml
-export DASK_KUBERNETES__WORKER_NAME=dask-{JUPYTERHUB_USER}-{uuid}
-
 #EOF
