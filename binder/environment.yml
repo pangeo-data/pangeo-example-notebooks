@@ -30,6 +30,7 @@ dependencies:
   - nbserverproxy
   - jupyter
   - ipywidgets
+  - graphviz
   - pip:
     - intake
     - intake-xarray

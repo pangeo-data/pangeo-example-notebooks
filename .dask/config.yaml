@@ -16,7 +16,7 @@ kubernetes:
           - '2'
           - --no-bokeh
           - --memory-limit
-          - 6GB
+          - 7GB
           - --death-timeout
           - '60'
         image: WORKER_IMAGE
@@ -24,7 +24,7 @@ kubernetes:
         resources:
           limits:
             cpu: "1.75"
-            memory: 2G
+            memory: 7G
           requests:
             cpu: "1.75"
-            memory: 2G
+            memory: 7G
