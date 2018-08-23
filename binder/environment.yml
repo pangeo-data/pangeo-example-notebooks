@@ -5,6 +5,7 @@ channels:
   - default
 dependencies:
   - python=3.6
+  - rasterio
   - numpy
   - scipy
   - pandas
