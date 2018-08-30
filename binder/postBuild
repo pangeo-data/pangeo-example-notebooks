@@ -1,4 +1,5 @@
 #!/bin/bash
 jupyter serverextension enable --py nbserverproxy --sys-prefix
+jupyter labextension install dask-labextension
 
 #EOF
