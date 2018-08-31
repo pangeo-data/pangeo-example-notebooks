@@ -32,7 +32,5 @@ dependencies:
   - ipywidgets
   - graphviz
   - pip:
-    - intake
-    - intake-xarray
     - kubernetes
     - git+https://github.com/dask/dask-kubernetes.git
