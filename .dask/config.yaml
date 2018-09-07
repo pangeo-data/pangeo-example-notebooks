@@ -1,8 +1,13 @@
-logging:
-  bokeh: critical
+distributed:
+  logging:
+    bokeh: critical
 
-diagnostics-link: "../proxy/{port}/status"
-tick-maximum-delay: 5s
+  dashboard:
+    link: /user/{JUPYTERHUB_USER}/proxy/{port}/status
+
+  admin:
+    tick:
+      limit: 5s
 
 kubernetes:
   worker-template:
