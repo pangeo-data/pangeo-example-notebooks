@@ -22,6 +22,7 @@ dependencies:
   - holoviews
   - geoviews
   - hvplot
+  - rasterio
   - datashader
   - netcdf4
   - zarr
