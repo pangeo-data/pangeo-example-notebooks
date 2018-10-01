@@ -34,3 +34,4 @@ dependencies:
   - pip:
     - kubernetes
     - git+https://github.com/dask/dask-kubernetes.git
+    - git+https://github.com/xgcm/xgcm.git
