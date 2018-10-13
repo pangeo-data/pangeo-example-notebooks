@@ -31,6 +31,7 @@ dependencies:
   - lz4
   - nbserverproxy
   - jupyter
+  - jupyterlab=0.34
   - ipywidgets
   - graphviz
   - pip:
