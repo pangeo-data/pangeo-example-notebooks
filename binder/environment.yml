@@ -28,7 +28,7 @@ dependencies:
   - python-blosc
   - lz4
   - nbserverproxy
-  - jupyter
+  - jupyterlab=0.35.1
   - ipywidgets
   - graphviz
   - pip:
