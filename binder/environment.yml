@@ -1,7 +1,6 @@
 name: pangeo
 channels:
   - conda-forge
-  - intake
 dependencies:
   - python=3.6
   - numpy
@@ -12,13 +11,14 @@ dependencies:
   - dask
   - distributed
   - gcsfs
-  - intake
-  - intake-xarray
+  - intake::intake
+  - intake::intake-xarray
   - scikit-image
   - scikit-learn
   - dask-ml
   - bokeh
-  - holoviews
+  - pyviz/label/earthsim::holoviews
+  - pyviz/label/earthsim::panel
   - geoviews
   - hvplot
   - rasterio
