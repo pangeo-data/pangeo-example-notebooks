@@ -2,7 +2,6 @@ name: pangeo
 channels:
   - conda-forge
   - intake
-  - default
 dependencies:
   - python=3.6
   - numpy
@@ -34,6 +33,4 @@ dependencies:
   - jupyterlab=0.34
   - ipywidgets
   - graphviz
-  - pip:
-    - kubernetes
-    - git+https://github.com/dask/dask-kubernetes.git
+  - dask-kubernetes
