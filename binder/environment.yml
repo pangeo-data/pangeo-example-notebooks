@@ -23,6 +23,7 @@ dependencies:
   - geoviews
   - hvplot
   - rasterio
+  - geoviews
   - datashader
   - netcdf4
   - zarr
@@ -35,3 +36,4 @@ dependencies:
   - ipywidgets
   - graphviz
   - dask-kubernetes
+  - xgcm
