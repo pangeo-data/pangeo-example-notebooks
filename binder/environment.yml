@@ -38,3 +38,5 @@ dependencies:
   - graphviz
   - dask-kubernetes
   - xgcm
+  - pip:
+    - git+https://github.com/pydata/xarray.git
