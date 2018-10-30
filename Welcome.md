@@ -24,7 +24,7 @@ Links are available within each notebook for additional documentation on that to
 
 ## Where is this running?
 
-This session is running on [binder.pangeo.org](https://binder.pangeo.org), a service designed by the Jupyter community, and operated by the Pangeo community. This Binder is running on Google Cloud Platform.
+This session is running on [binder.pangeo.io](http://binder.pangeo.io), a service designed by the Jupyter community, and operated by the Pangeo community. This Binder is running on Google Cloud Platform.
 
 ## Acknowledgments
 

@@ -33,8 +33,9 @@ dependencies:
   - lz4
   - nbserverproxy
   - jupyter
-  - jupyterlab=0.34
+  - jupyterlab=0.35
   - ipywidgets
+  - ipyleaflet
   - graphviz
   - dask-kubernetes
   - xgcm

@@ -1,3 +1,6 @@
+fuse_subgraphs: False
+fuse_ave_width: 0
+
 distributed:
   logging:
     bokeh: critical
@@ -10,9 +13,13 @@ distributed:
       limit: 5s
 
 kubernetes:
+  count:
+    max: 50
   worker-template:
     metadata:
     spec:
+      nodeSelector:
+        dask-worker: True
       restartPolicy: Never
       containers:
       - args:
@@ -24,12 +31,12 @@ kubernetes:
           - 7GB
           - --death-timeout
           - '60'
-        image: WORKER_IMAGE
+        image: ${JUPYTER_IMAGE_SPEC}
         name: dask-worker
         resources:
           limits:
             cpu: "1.75"
             memory: 7G
           requests:
-            cpu: "1.75"
+            cpu: 1
             memory: 7G
