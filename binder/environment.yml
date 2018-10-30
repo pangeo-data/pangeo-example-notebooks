@@ -1,10 +1,9 @@
 name: pangeo
 channels:
   - conda-forge
-  - intake
-  - default
 dependencies:
   - python=3.6
+  - rasterio
   - numpy
   - scipy
   - pandas
@@ -13,13 +12,18 @@ dependencies:
   - dask
   - distributed
   - gcsfs
-  - intake
-  - intake-xarray
+  - intake::intake
+  - intake::intake-xarray
+  - s3fs
   - scikit-image
   - scikit-learn
   - dask-ml
   - bokeh
-  - holoviews
+  - pyviz/label/earthsim::holoviews
+  - pyviz/label/earthsim::panel
+  - geoviews
+  - hvplot
+  - rasterio
   - geoviews
   - datashader
   - netcdf4
@@ -28,12 +32,10 @@ dependencies:
   - python-blosc
   - lz4
   - nbserverproxy
+  - jupyter
   - jupyterlab=0.35.1
-  - nodejs=8.9
   - ipywidgets
   - ipyleaflet
   - graphviz
-  - pip:
-    - kubernetes
-    - git+https://github.com/dask/dask-kubernetes.git
-    - git+https://github.com/xgcm/xgcm.git
+  - dask-kubernetes
+  - xgcm
