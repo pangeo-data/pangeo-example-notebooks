@@ -1,25 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-export DASK_KUBERNETES__WORKER_TEMPLATE_PATH=${PWD}/.dask/config.yaml
-export DASK_KUBERNETES__WORKER_NAME=dask-{JUPYTERHUB_USER}-{uuid}
-
-# set worker image url in worker template
-if [[ -z "${JUPYTER_IMAGE_SPEC}" ]]; then
-    echo "JUPYTER_IMAGE_SPEC is not set"
-else
-  sed -i -e "s|WORKER_IMAGE|${JUPYTER_IMAGE_SPEC}|g" ${DASK_KUBERNETES__WORKER_TEMPLATE_PATH}
-fi
-
-# This setups an experimental dask-dashboard feature
-# --------------------------------------------------------------------------- #
 # Replace DASK_DASHBOARD_URL with the proxy location
 sed -i -e "s|DASK_DASHBOARD_URL|/user/${JUPYTERHUB_USER}/proxy/8787|g" binder/jupyterlab-workspace.json
+# Get the right workspace ID
+sed -i -e "s|WORKSPACE_ID|/user/${JUPYTERHUB_USER}/lab|g" binder/jupyterlab-workspace.json
 
-# Copy into the workspaces directory
-# NOTE: this relies on internal path logic to the JupyterLab workspaces handler.
-# As soon as a CLI becomes available for this, we should use that.
-mkdir -p ${HOME}/.jupyter/lab/workspaces
-python ./binder/make_workspace.py
-# --------------------------------------------------------------------------- #
+# Import the workspace into JupyterLab
+jupyter lab workspaces import binder/jupyterlab-workspace.json \
+  --NotebookApp.base_url=user/${JUPYTERHUB_USER}
 
 exec "$@"
