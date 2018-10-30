@@ -33,7 +33,7 @@ dependencies:
   - lz4
   - nbserverproxy
   - jupyter
-  - jupyterlab=0.35.1
+  - jupyterlab=0.35
   - ipywidgets
   - ipyleaflet
   - graphviz
