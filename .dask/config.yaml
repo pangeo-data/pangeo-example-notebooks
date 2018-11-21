@@ -43,8 +43,8 @@ kubernetes:
 
 labextension:
   factory:
-    module: 'dask_kubernetes'
-    class: ‘KubeCluster'
+    module: dask_kubernetes
+    class: KubeCluster
     args: []
     kwargs:
       n_workers: 10
