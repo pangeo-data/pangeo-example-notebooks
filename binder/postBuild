@@ -5,7 +5,7 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                              @pyviz/jupyterlab_pyviz \
                              jupyter-leaflet
 
-git clone https://github.com/dask/dask-labextension.git
+git clone --single-branch -b serverextension https://github.com/ian-r-rose/dask-labextension.git
 cd dask-labextension
 npm install   # Install npm package dependencies
 npm run build  # Compile the TypeScript sources to Javascript
