@@ -5,9 +5,6 @@ distributed:
   logging:
     bokeh: critical
 
-  dashboard:
-    link: /user/{JUPYTERHUB_USER}/proxy/{port}/status
-
   admin:
     tick:
       limit: 5s
@@ -46,5 +43,4 @@ labextension:
     module: dask_kubernetes
     class: KubeCluster
     args: []
-    kwargs:
-      n_workers: 10
+    kwargs: {}
