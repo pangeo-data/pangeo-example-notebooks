@@ -40,3 +40,11 @@ kubernetes:
           requests:
             cpu: 1
             memory: 7G
+
+labextension:
+  factory:
+    module: 'dask_kubernetes'
+    class: ‘KubeCluster'
+    args: []
+    kwargs:
+      n_workers: 10
