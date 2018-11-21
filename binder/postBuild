@@ -11,4 +11,7 @@ npm install   # Install npm package dependencies
 npm run build  # Compile the TypeScript sources to Javascript
 jupyter labextension install  # Install the current directory as an extension
 
+pip install -e .
+jupyter serverextension enable --sys-prefix dask_labextension
+
 #EOF
