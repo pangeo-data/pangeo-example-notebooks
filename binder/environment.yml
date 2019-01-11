@@ -10,7 +10,7 @@ dependencies:
   - xarray
   - matplotlib
   - dask
-  - distributed
+  # - distributed
   - gcsfs
   - intake::intake
   - intake::intake-xarray
@@ -41,4 +41,5 @@ dependencies:
   - pip:
     - git+https://github.com/xgcm/xgcm.git
     - git+https://github.com/pydata/xarray.git
+    - git+https://github.com/dask/distributed.git
 
