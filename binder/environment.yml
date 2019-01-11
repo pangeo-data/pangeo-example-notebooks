@@ -19,8 +19,8 @@ dependencies:
   - scikit-learn
   - dask-ml
   - bokeh
-  - pyviz/label/earthsim::holoviews
-  - pyviz/label/earthsim::panel
+  - holoviews
+  - panel
   - geoviews
   - hvplot
   - rasterio
