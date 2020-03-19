@@ -37,7 +37,7 @@ dependencies:
   - ipywidgets
   - ipyleaflet
   - graphviz
-  - dask-kubernetes
+  - dask-gateway
   - pip:
     - git+https://github.com/xgcm/xgcm.git
     - git+https://github.com/pydata/xarray.git
